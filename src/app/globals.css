@@ -1,0 +1,635 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* 🌈 Romantic Animated Gradient Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2b0036, #5f0f40, #9a031e);
+  background-size: 400% 400%;
+  animation: gradientMove 14s ease infinite;
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 💖 Floating Hearts */
+.heart {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0.5;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
+
+.h1 { left: 8%;  animation-duration: 10s; animation-delay: 0s; }
+.h2 { left: 18%; animation-duration: 12s; animation-delay: 2s; }
+.h3 { left: 30%; animation-duration: 14s; animation-delay: 4s; }
+.h4 { left: 45%; animation-duration: 11s; animation-delay: 1s; }
+.h5 { left: 60%; animation-duration: 13s; animation-delay: 3s; }
+.h6 { left: 72%; animation-duration: 15s; animation-delay: 5s; }
+.h7 { left: 85%; animation-duration: 12s; animation-delay: 6s; }
+.h8 { left: 95%; animation-duration: 16s; animation-delay: 2s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+/* ✨ Center Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.glass-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.glass-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.emoji {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* 📱 Mobile Friendly */
+@media (max-width: 500px) {
+  .glass-card {
+    padding: 30px 20px;
+  }
+  .glass-card h1 {
+    font-size: 22px;
+  }
+  .glass-card p {
+    font-size: 14px;
+  }
+}
+/* 🌹 Rose Petals Falling Animation */
+.rose-petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  font-size: 24px;
+  animation: fallPetal linear infinite;
+  opacity: 0.9;
+}
+
+/* Random positions & speeds */
+.p0 { left: 5%; animation-duration: 8s; }
+.p1 { left: 12%; animation-duration: 10s; }
+.p2 { left: 20%; animation-duration: 7s; }
+.p3 { left: 28%; animation-duration: 11s; }
+.p4 { left: 35%; animation-duration: 9s; }
+.p5 { left: 42%; animation-duration: 8s; }
+.p6 { left: 50%; animation-duration: 12s; }
+.p7 { left: 58%; animation-duration: 9s; }
+.p8 { left: 65%; animation-duration: 10s; }
+.p9 { left: 72%; animation-duration: 7s; }
+.p10 { left: 78%; animation-duration: 11s; }
+.p11 { left: 85%; animation-duration: 8s; }
+.p12 { left: 90%; animation-duration: 9s; }
+.p13 { left: 95%; animation-duration: 10s; }
+.p14 { left: 15%; animation-duration: 12s; }
+
+@keyframes fallPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* 🧸 Floating Teddy Bears — Feb 10 */
+.teddy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.teddy {
+  position: absolute;
+  font-size: 28px;
+  animation: teddyFloat linear infinite;
+  opacity: 0.9;
+}
+
+.t0 { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.t1 { left: 25%; animation-duration: 14s; animation-delay: 3s; }
+.t2 { left: 40%; animation-duration: 11s; animation-delay: 1s; }
+.t3 { left: 55%; animation-duration: 15s; animation-delay: 4s; }
+.t4 { left: 70%; animation-duration: 13s; animation-delay: 2s; }
+.t5 { left: 85%; animation-duration: 16s; animation-delay: 5s; }
+.t6 { left: 30%; animation-duration: 12s; animation-delay: 6s; }
+.t7 { left: 60%; animation-duration: 14s; animation-delay: 7s; }
+
+@keyframes teddyFloat {
+  0% { transform: translateY(110vh) scale(0.9); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
+}
+
+/* 💋 Kiss Marks — Feb 13 */
+.kiss-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kiss {
+  position: absolute;
+  font-size: 26px;
+  animation: kissFloat linear infinite;
+  opacity: 0.9;
+}
+
+.k0 { left: 15%; animation-duration: 11s; animation-delay: 0s; }
+.k1 { left: 30%; animation-duration: 13s; animation-delay: 2s; }
+.k2 { left: 50%; animation-duration: 12s; animation-delay: 1s; }
+.k3 { left: 65%; animation-duration: 14s; animation-delay: 3s; }
+.k4 { left: 80%; animation-duration: 11s; animation-delay: 2s; }
+.k5 { left: 25%; animation-duration: 15s; animation-delay: 4s; }
+.k6 { left: 45%; animation-duration: 12s; animation-delay: 5s; }
+.k7 { left: 70%; animation-duration: 13s; animation-delay: 6s; }
+.k8 { left: 85%; animation-duration: 11s; animation-delay: 7s; }
+.k9 { left: 55%; animation-duration: 14s; animation-delay: 8s; }
+
+@keyframes kissFloat {
+  0% { transform: translateY(110vh) rotate(-8deg); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(8deg); opacity: 0; }
+}
+
+/* ❤️ Heart Rain — Feb 14 */
+.heart-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.drop {
+  position: absolute;
+  font-size: 20px;
+  animation: heartFall linear infinite;
+  opacity: 0.9;
+}
+
+.d0 { left: 5%; animation-duration: 7s; }
+.d1 { left: 15%; animation-duration: 6s; }
+.d2 { left: 25%; animation-duration: 8s; }
+.d3 { left: 35%; animation-duration: 7s; }
+.d4 { left: 45%; animation-duration: 6s; }
+.d5 { left: 55%; animation-duration: 8s; }
+.d6 { left: 65%; animation-duration: 7s; }
+.d7 { left: 75%; animation-duration: 6s; }
+.d8 { left: 85%; animation-duration: 8s; }
+.d9 { left: 95%; animation-duration: 7s; }
+.d10 { left: 20%; animation-duration: 6s; }
+.d11 { left: 40%; animation-duration: 8s; }
+.d12 { left: 60%; animation-duration: 7s; }
+.d13 { left: 80%; animation-duration: 6s; }
+.d14 { left: 50%; animation-duration: 8s; }
+.d15 { left: 30%; animation-duration: 7s; }
+.d16 { left: 70%; animation-duration: 6s; }
+.d17 { left: 10%; animation-duration: 8s; }
+.d18 { left: 90%; animation-duration: 7s; }
+.d19 { left: 35%; animation-duration: 6s; }
+
+@keyframes heartFall {
+  0% { transform: translateY(-10vh) scale(0.9); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(110vh) scale(1.1); opacity: 0; }
+}
+/* ✨ Sparkle Particles */
+.sparkles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: sparkle 6s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); }
+  50% { opacity: 0.9; transform: scale(1.4); }
+}
+
+/* Random sparkle positions */
+.s0{top:10%;left:20%}.s1{top:30%;left:50%}.s2{top:60%;left:70%}
+.s3{top:80%;left:40%}.s4{top:20%;left:80%}.s5{top:50%;left:10%}
+.s6{top:70%;left:30%}.s7{top:15%;left:60%}.s8{top:40%;left:85%}
+.s9{top:25%;left:35%}.s10{top:55%;left:75%}.s11{top:85%;left:55%}
+.s12{top:35%;left:15%}.s13{top:65%;left:90%}.s14{top:75%;left:25%}
+.s15{top:45%;left:45%}.s16{top:5%;left:70%}.s17{top:90%;left:15%}
+.s18{top:12%;left:85%}.s19{top:52%;left:60%}.s20{top:32%;left:22%}
+.s21{top:72%;left:48%}.s22{top:62%;left:18%}.s23{top:82%;left:68%}
+.s24{top:22%;left:38%}
+/* 💫 Soft Glow Pulse */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 40px;
+  background: radial-gradient(circle, rgba(255,105,180,0.25), transparent 70%);
+  z-index: -1;
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+/* 💖 Heartbeat animation (Valentine's Day only) */
+.heartbeat {
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  40% { transform: scale(0.95); }
+  60% { transform: scale(1.15); }
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* 🌈 Romantic Animated Gradient Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2b0036, #5f0f40, #9a031e);
+  background-size: 400% 400%;
+  animation: gradientMove 14s ease infinite;
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 💖 Floating Hearts */
+.heart {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0.5;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
+
+.h1 { left: 8%;  animation-duration: 10s; animation-delay: 0s; }
+.h2 { left: 18%; animation-duration: 12s; animation-delay: 2s; }
+.h3 { left: 30%; animation-duration: 14s; animation-delay: 4s; }
+.h4 { left: 45%; animation-duration: 11s; animation-delay: 1s; }
+.h5 { left: 60%; animation-duration: 13s; animation-delay: 3s; }
+.h6 { left: 72%; animation-duration: 15s; animation-delay: 5s; }
+.h7 { left: 85%; animation-duration: 12s; animation-delay: 6s; }
+.h8 { left: 95%; animation-duration: 16s; animation-delay: 2s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+/* ✨ Center Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.glass-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.glass-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.emoji {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* 📱 Mobile Friendly */
+@media (max-width: 500px) {
+  .glass-card {
+    padding: 30px 20px;
+  }
+  .glass-card h1 {
+    font-size: 22px;
+  }
+  .glass-card p {
+    font-size: 14px;
+  }
+}
+/* 🌹 Rose Petals Falling Animation */
+.rose-petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  font-size: 24px;
+  animation: fallPetal linear infinite;
+  opacity: 0.9;
+}
+
+/* Random positions & speeds */
+.p0 { left: 5%; animation-duration: 8s; }
+.p1 { left: 12%; animation-duration: 10s; }
+.p2 { left: 20%; animation-duration: 7s; }
+.p3 { left: 28%; animation-duration: 11s; }
+.p4 { left: 35%; animation-duration: 9s; }
+.p5 { left: 42%; animation-duration: 8s; }
+.p6 { left: 50%; animation-duration: 12s; }
+.p7 { left: 58%; animation-duration: 9s; }
+.p8 { left: 65%; animation-duration: 10s; }
+.p9 { left: 72%; animation-duration: 7s; }
+.p10 { left: 78%; animation-duration: 11s; }
+.p11 { left: 85%; animation-duration: 8s; }
+.p12 { left: 90%; animation-duration: 9s; }
+.p13 { left: 95%; animation-duration: 10s; }
+.p14 { left: 15%; animation-duration: 12s; }
+
+@keyframes fallPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* 🧸 Floating Teddy Bears — Feb 10 */
+.teddy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.teddy {
+  position: absolute;
+  font-size: 28px;
+  animation: teddyFloat linear infinite;
+  opacity: 0.9;
+}
+
+.t0 { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.t1 { left: 25%; animation-duration: 14s; animation-delay: 3s; }
+.t2 { left: 40%; animation-duration: 11s; animation-delay: 1s; }
+.t3 { left: 55%; animation-duration: 15s; animation-delay: 4s; }
+.t4 { left: 70%; animation-duration: 13s; animation-delay: 2s; }
+.t5 { left: 85%; animation-duration: 16s; animation-delay: 5s; }
+.t6 { left: 30%; animation-duration: 12s; animation-delay: 6s; }
+.t7 { left: 60%; animation-duration: 14s; animation-delay: 7s; }
+
+@keyframes teddyFloat {
+  0% { transform: translateY(110vh) scale(0.9); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.1); opacity: 0; }
+}
+
+/* 💋 Kiss Marks — Feb 13 */
+.kiss-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kiss {
+  position: absolute;
+  font-size: 26px;
+  animation: kissFloat linear infinite;
+  opacity: 0.9;
+}
+
+.k0 { left: 15%; animation-duration: 11s; animation-delay: 0s; }
+.k1 { left: 30%; animation-duration: 13s; animation-delay: 2s; }
+.k2 { left: 50%; animation-duration: 12s; animation-delay: 1s; }
+.k3 { left: 65%; animation-duration: 14s; animation-delay: 3s; }
+.k4 { left: 80%; animation-duration: 11s; animation-delay: 2s; }
+.k5 { left: 25%; animation-duration: 15s; animation-delay: 4s; }
+.k6 { left: 45%; animation-duration: 12s; animation-delay: 5s; }
+.k7 { left: 70%; animation-duration: 13s; animation-delay: 6s; }
+.k8 { left: 85%; animation-duration: 11s; animation-delay: 7s; }
+.k9 { left: 55%; animation-duration: 14s; animation-delay: 8s; }
+
+@keyframes kissFloat {
+  0% { transform: translateY(110vh) rotate(-8deg); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(8deg); opacity: 0; }
+}
+
+/* ❤️ Heart Rain — Feb 14 */
+.heart-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.drop {
+  position: absolute;
+  font-size: 20px;
+  animation: heartFall linear infinite;
+  opacity: 0.9;
+}
+
+.d0 { left: 5%; animation-duration: 7s; }
+.d1 { left: 15%; animation-duration: 6s; }
+.d2 { left: 25%; animation-duration: 8s; }
+.d3 { left: 35%; animation-duration: 7s; }
+.d4 { left: 45%; animation-duration: 6s; }
+.d5 { left: 55%; animation-duration: 8s; }
+.d6 { left: 65%; animation-duration: 7s; }
+.d7 { left: 75%; animation-duration: 6s; }
+.d8 { left: 85%; animation-duration: 8s; }
+.d9 { left: 95%; animation-duration: 7s; }
+.d10 { left: 20%; animation-duration: 6s; }
+.d11 { left: 40%; animation-duration: 8s; }
+.d12 { left: 60%; animation-duration: 7s; }
+.d13 { left: 80%; animation-duration: 6s; }
+.d14 { left: 50%; animation-duration: 8s; }
+.d15 { left: 30%; animation-duration: 7s; }
+.d16 { left: 70%; animation-duration: 6s; }
+.d17 { left: 10%; animation-duration: 8s; }
+.d18 { left: 90%; animation-duration: 7s; }
+.d19 { left: 35%; animation-duration: 6s; }
+
+@keyframes heartFall {
+  0% { transform: translateY(-10vh) scale(0.9); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(110vh) scale(1.1); opacity: 0; }
+}
+/* ✨ Sparkle Particles */
+.sparkles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: sparkle 6s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); }
+  50% { opacity: 0.9; transform: scale(1.4); }
+}
+
+/* Random sparkle positions */
+.s0{top:10%;left:20%}.s1{top:30%;left:50%}.s2{top:60%;left:70%}
+.s3{top:80%;left:40%}.s4{top:20%;left:80%}.s5{top:50%;left:10%}
+.s6{top:70%;left:30%}.s7{top:15%;left:60%}.s8{top:40%;left:85%}
+.s9{top:25%;left:35%}.s10{top:55%;left:75%}.s11{top:85%;left:55%}
+.s12{top:35%;left:15%}.s13{top:65%;left:90%}.s14{top:75%;left:25%}
+.s15{top:45%;left:45%}.s16{top:5%;left:70%}.s17{top:90%;left:15%}
+.s18{top:12%;left:85%}.s19{top:52%;left:60%}.s20{top:32%;left:22%}
+.s21{top:72%;left:48%}.s22{top:62%;left:18%}.s23{top:82%;left:68%}
+.s24{top:22%;left:38%}
+/* 💫 Soft Glow Pulse */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 40px;
+  background: radial-gradient(circle, rgba(255,105,180,0.25), transparent 70%);
+  z-index: -1;
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+/* 💖 Heartbeat animation (Valentine's Day only) */
+.heartbeat {
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  40% { transform: scale(0.95); }
+  60% { transform: scale(1.15); }
+}
+
+
+
